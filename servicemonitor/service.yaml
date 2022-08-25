@@ -1,0 +1,12 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: prometheus
+  labels:
+    name: prometheus
+spec:
+  selector:
+    matchLabels: 
+      name: applicationservice  
+  endpoints:
+    - port: mere-service-ka-port-ka-naam

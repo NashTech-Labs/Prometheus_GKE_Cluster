@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prom-example
+  labels:
+    app: prom-example
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: prom-example
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: prom-example
+    spec:
+      nodeSelector:
+        kubernetes.io/os: linux
+        kubernetes.io/arch: amd64
+      containers:
+      - image: nilebox/prometheus-example-app@sha256:dab60d038c5d6915af5bcbe5f0279a22b95a8c8be254153e22d7cd81b21b84c5
+        name: prom-example
+        ports:
+        - name: metrics
+          containerPort: 1234
+        command:
+        - "/main"
+        - "--process-metrics"
+        - "--go-metrics"

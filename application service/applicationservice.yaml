@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: applicationservice
+  labels:
+    name: applicationservice
+    
+spec:
+  selector:
+    app: prom-example
+  ports:
+  - port: 5000
+    targetPort: 1234
+    name: mere-service-ka-port-ka-naam
