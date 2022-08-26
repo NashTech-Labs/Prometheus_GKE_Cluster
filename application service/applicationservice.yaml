@@ -7,8 +7,8 @@ metadata:
     
 spec:
   selector:
-    app: prom-example
+    app: monitoring-prometheus
   ports:
   - port: 5000
     targetPort: 1234
-    name: mere-service-ka-port-ka-naam
+    name: port
