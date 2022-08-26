@@ -9,4 +9,4 @@ spec:
     matchLabels: 
       name: applicationservice  
   endpoints:
-    - port: mere-service-ka-port-ka-naam
+    - port: port
