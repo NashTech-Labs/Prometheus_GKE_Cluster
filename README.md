@@ -12,7 +12,6 @@ gcloud container clusters get-credentials argocd
 
 ## Application deployed on k8s engine which is already exposing prometheus metrics .
 
-**link of application*
 
 1. create a menifest file for deployment 
 
